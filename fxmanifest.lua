@@ -2,32 +2,17 @@ fx_version 'adamant'
 
 game 'gta5'
 
-name 'wl_menu_f5'
+author 'BabyDrill'
 
-description 'Un semplice menù f5 per academy o rp da configurare!!'
+version '3.0'
 
 client_scripts {
-	"@es_extended/locale.lua",
-	"locales/it.lua",
-	"client/client.lua",
-	"client/client_smontaarmi.lua",
-	"config/config_client.lua",
-	"config/config_smontaarmi.lua"
+	"config/config.lua",
+	"client/client.lua"
 }
 
 server_scripts {
-	"@mysql-async/lib/MySQL.lua",
-	"@es_extended/locale.lua",
-	"locales/it.lua",
+	'@mysql-async/lib/MySQL.lua',
+	"config/*.lua",
 	"server/server.lua",
-	"server/server_smontaarmi.lua",
-	"config/config_smontaarmi.lua"
-}
-
-dependencies {
-    'es_extended',
-    'mysql-async',
-	'jsfour-idcard',
-	'esx_billing',
-	'esx_ambulancejob'
 }
