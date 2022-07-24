@@ -44,7 +44,7 @@ AddEventHandler('wolf_development:smontaitem', function(weapon, colpi)
     local xPlayer = ESX.GetPlayerFromId(source)
     local arma = xPlayer.getInventoryItem(weapon).count
 
-    if arma >= 1 or colpi > 250 then
+    if arma >= 1 or not colpi > 250 then
         if weaponConfig ~= nil then
             if Config.Settings.ox_inventory then
                 xPlayer.removeInventoryItem(weapon, 1)
